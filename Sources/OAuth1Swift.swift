@@ -110,7 +110,7 @@ open class OAuth1Swift: OAuthSwift {
     }
 
     // 1. Request token
-    func postOAuthRequestToken(callbackURL: URL, success: @escaping TokenSuccessHandler, failure: FailureHandler?) {
+    open func postOAuthRequestToken(callbackURL: URL, success: @escaping TokenSuccessHandler, failure: FailureHandler?) {
         var parameters = [String: Any]()
         parameters["oauth_callback"] = callbackURL.absoluteString
 
